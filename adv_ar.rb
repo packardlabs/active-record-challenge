@@ -68,11 +68,10 @@ end
 
 ########### Only commit changes below this line
 class DbTest < Minitest::Test
-  def test_association_stuff
+  def test_adv_scopes
     Seeds.populate
 
-    #change these to be correct
-    authors_with_viewed_posts = Author.all
+    authors_with_viewed_posts = Author.all #change Author.all to the correct scope/db query
 
     assert_equal 5, authors_with_viewed_posts.count
   end
